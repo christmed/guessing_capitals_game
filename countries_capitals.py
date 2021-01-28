@@ -13,7 +13,7 @@ capitals = [
     },
     {
         "country": "American Samoa",
-        "city": "Fagatogo"
+        "city": "Pago Pago"
     },
     {
         "country": "Andorra",
@@ -85,7 +85,7 @@ capitals = [
     },
     {
         "country": "Benin",
-        "city": "Porto-Novo"
+        "city": "Porto Novo"
     },
     {
         "country": "Bermuda",
@@ -137,7 +137,7 @@ capitals = [
     },
     {
         "country": "Cameroon",
-        "city": "Yaound"
+        "city": "Yaounde"
     },
     {
         "country": "Canada",
@@ -177,7 +177,7 @@ capitals = [
     },
     {
         "country": "Colombia",
-        "city": "Santaf"
+        "city": "Bogota"
     },
     {
         "country": "Comoros",
@@ -193,7 +193,7 @@ capitals = [
     },
     {
         "country": "Costa Rica",
-        "city": "San Jos"
+        "city": "San Jose"
     },
     {
         "country": "Croatia",
@@ -209,7 +209,7 @@ capitals = [
     },
     {
         "country": "Czech Republic",
-        "city": "Praha"
+        "city": "Prague"
     },
     {
         "country": "Denmark",
@@ -225,7 +225,7 @@ capitals = [
     },
     {
         "country": "Dominican Republic",
-        "city": "Santo Domingo de Guzm"
+        "city": "Santo Domingo"
     },
     {
         "country": "East Timor",
@@ -261,7 +261,7 @@ capitals = [
     },
     {
         "country": "Ethiopia",
-        "city": "Addis Abeba"
+        "city": "Addis Ababa"
     },
     {
         "country": "Falkland Islands",
@@ -277,7 +277,7 @@ capitals = [
     },
     {
         "country": "Finland",
-        "city": "Helsinki [Helsingfors]"
+        "city": "Helsinki"
     },
     {
         "country": "France",
@@ -321,7 +321,7 @@ capitals = [
     },
     {
         "country": "Greece",
-        "city": "Athenai"
+        "city": "Athens"
     },
     {
         "country": "Greenland",
@@ -357,7 +357,7 @@ capitals = [
     },
     {
         "country": "Haiti",
-        "city": "Port-au-Prince"
+        "city": "Port au Prince"
     },
     {
         "country": "Heard Island and McDonald Islands",
@@ -365,7 +365,7 @@ capitals = [
     },
     {
         "country": "Holy See (Vatican City State)",
-        "city": "Citt"
+        "city": "Vatican City"
     },
     {
         "country": "Honduras",
@@ -381,7 +381,7 @@ capitals = [
     },
     {
         "country": "Iceland",
-        "city": "Reykjav"
+        "city": "Reykjavík"
     },
     {
         "country": "India",
@@ -409,7 +409,7 @@ capitals = [
     },
     {
         "country": "Italy",
-        "city": "Roma"
+        "city": "Rome"
     },
     {
         "country": "Ivory Coast",
@@ -437,11 +437,11 @@ capitals = [
     },
     {
         "country": "Kiribati",
-        "city": "Bairiki"
+        "city": "South Tarawa"
     },
     {
         "country": "Kuwait",
-        "city": "Kuwait"
+        "city": "Kuwait City"
     },
     {
         "country": "Kyrgyzstan",
@@ -468,7 +468,7 @@ capitals = [
         "city": "Monrovia"
     },
     {
-        "country": "Libyan Arab Jamahiriya",
+        "country": "Libya",
         "city": "Tripoli"
     },
     {
@@ -481,7 +481,7 @@ capitals = [
     },
     {
         "country": "Luxembourg",
-        "city": "Luxembourg [Luxemburg/L"
+        "city": "Luxembourg"
     },
     {
         "country": "Macao",
@@ -533,14 +533,14 @@ capitals = [
     },
     {
         "country": "Mayotte",
-        "city": "Mamoutzou"
+        "city": "Mamoudzou"
     },
     {
         "country": "Mexico",
-        "city": "Ciudad de M"
+        "city": "Mexico City"
     },
     {
-        "country": "Micronesia, Federated States of",
+        "country": "Federated States of Micronesia",
         "city": "Palikir"
     },
     {
@@ -549,11 +549,11 @@ capitals = [
     },
     {
         "country": "Monaco",
-        "city": "Monaco-Ville"
+        "city": "Monaco"
     },
     {
         "country": "Mongolia",
-        "city": "Ulan Bator"
+        "city": "Ulaanbaatar"
     },
     {
         "country": "Montenegro",
@@ -597,7 +597,7 @@ capitals = [
     },
     {
         "country": "New Caledonia",
-        "city": "Noum"
+        "city": "Noumea"
     },
     {
         "country": "New Zealand",
@@ -641,7 +641,7 @@ capitals = [
     },
     {
         "country": "Oman",
-        "city": "Masqat"
+        "city": "Muscat"
     },
     {
         "country": "Pakistan",
@@ -649,7 +649,7 @@ capitals = [
     },
     {
         "country": "Palau",
-        "city": "Koror"
+        "city": "Ngerulmud"
     },
     {
         "country": "Palestine",
@@ -657,7 +657,7 @@ capitals = [
     },
     {
         "country": "Panama",
-        "city": "Ciudad de Panam"
+        "city": "Ciudad de Panama"
     },
     {
         "country": "Papua New Guinea",
@@ -665,7 +665,7 @@ capitals = [
     },
     {
         "country": "Paraguay",
-        "city": "Asunci"
+        "city": "Asuncion"
     },
     {
         "country": "Peru",
@@ -676,16 +676,16 @@ capitals = [
         "city": "Manila"
     },
     {
-        "country": "Pitcairn",
+        "country": "Pitcairn Islands",
         "city": "Adamstown"
     },
     {
         "country": "Poland",
-        "city": "Warszawa"
+        "city": "Warszaw"
     },
     {
         "country": "Portugal",
-        "city": "Lisboa"
+        "city": "Lisbon"
     },
     {
         "country": "Puerto Rico",
@@ -697,11 +697,11 @@ capitals = [
     },
     {
         "country": "Reunion",
-        "city": "Saint-Denis"
+        "city": "Saint Denis"
     },
     {
         "country": "Romania",
-        "city": "Bucuresti"
+        "city": "Bucharest"
     },
     {
         "country": "Russian Federation",
@@ -740,8 +740,8 @@ capitals = [
         "city": "San Marino"
     },
     {
-        "country": "Sao Tome and Principe",
-        "city": "S"
+        "country": "São Tomé and Príncipe",
+        "city": "São Tomé"
     },
     {
         "country": "Saudi Arabia",
@@ -813,7 +813,7 @@ capitals = [
     },
     {
         "country": "Sudan",
-        "city": "Khartum"
+        "city": "Khartoum"
     },
     {
         "country": "Suriname",
@@ -921,11 +921,11 @@ capitals = [
     },
     {
         "country": "Uzbekistan",
-        "city": "Toskent"
+        "city": "Taskent"
     },
     {
         "country": "Vanuatu",
-        "city": "Port-Vila"
+        "city": "Port Vila"
     },
     {
         "country": "Venezuela",
@@ -949,7 +949,7 @@ capitals = [
     },
     {
         "country": "Wallis and Futuna",
-        "city": "Mata-Utu"
+        "city": "Mata Utu"
     },
     {
         "country": "Western Sahara",
