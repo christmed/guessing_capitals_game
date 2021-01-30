@@ -77,7 +77,7 @@ capitals = [
     },
     {
         "country": "Belgium",
-        "city": "Bruxelles [Brussel]"
+        "city": "Brussels"
     },
     {
         "country": "Belize",

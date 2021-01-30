@@ -36,6 +36,7 @@ random.shuffle(capitals)
 
 start_time = time.time()
 score = 0
+already_asked = list()
 
 while True:
     # Create a 90 second timer for the game.
@@ -54,7 +55,6 @@ while True:
     rand_country = random.choice(countries)
 
     # Consider using a recursive function.
-    already_asked = list()
     already_asked.append(rand_country)
 
     # Get right and wrong answers.
@@ -64,6 +64,15 @@ while True:
     wrong_answers = random.sample(wrong_answers, 3)
     answer_options = wrong_answers + [correct_answer]
     random.shuffle(answer_options)
-    print(answer_options)
+
+    # Create list of correct answers to compare with user choices.
+    correct_answers = list()
+    correct_answers.append(correct_answer)
+
+    print(f'What is the capital of {rand_country}')
+    for i in range(4):
+        print('ABCD'[i], answer_options[i])
+    print('')
+
 
 print("Time's over!")
