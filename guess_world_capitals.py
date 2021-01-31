@@ -27,32 +27,90 @@ def game_instructions():
     print(no_cheat)
 
 
+def countdown():
+    """"Simulates a countdown."""
+
+    print('Are you ready?')
+    time.sleep(1)
+    print('3...')
+    time.sleep(1)
+    print('2...')
+    time.sleep(1)
+    print('1...')
+    print('Here we go!\n')
+
+
+def dict_options(answer_opts):
+    """"Create a dict of answers for the current question.
+
+    :param answer_opts: right and wrong answers.
+    :type answer_opts: list
+    :returns: a dictionary with the options and its answers.
+    :rtype: dict
+    """
+    d_options = {}
+    for i in range(4):
+        dict_option = {'abcd'[i]: answer_opts[i]}
+        d_options.update(dict_option)
+    return d_options
+
+
+def check_answer(d_options, selected_opt, correct_ans):
+    """Checks whether answer is right or wrong.
+
+    :param d_options: dict of possible answers.
+    :type d_options: dict
+    :param selected_opt: user answer
+    :type selected_opt: str
+    :param correct_ans: correct answer of question.
+    :type correct_ans: str
+    :returns: True, False or None depending of the answer
+        0 - incorrect
+        1- correct
+        None - Invalid option
+    :rtype boolean or none"""
+
+    if selected_opt in d_options.keys():
+        selected_answer = d_options[selected_opt]
+    else:
+        print("There isn't such option. Try again.")
+        return None
+
+    if selected_answer == correct_ans:
+        return True
+    else:
+        return False
+
+
 # Show instructions.
 game_instructions()
+countdown()
 
 # Store game data. Keys are countries and values are their capitals.
 capitals = countries_capitals.capitals
 random.shuffle(capitals)
 
-start_time = time.time()
-score = 0
+f_capitals = {}
+# Flatten capitals dictionary.
+for d in capitals:
+    cty_cap = {d['country']: d['city']}
+    f_capitals.update(cty_cap)
+
+# Create list of asked countries to avoid duplicates.
 already_asked = list()
 
-while True:
-    # Create a 90 second timer for the game.
-    end_time = time.time()
-    if end_time - start_time >= 5:
-        break
-
-    f_capitals = {}
-    # Flatten capitals dictionary.
-    for dict in capitals:
-        cty_cap = {dict['country']: dict['city']}
-        f_capitals.update(cty_cap)
-
+# Create a 90 second timer for the game.
+start_time = time.time()
+end_time = time.time()
+timer = end_time - start_time
+score = 0
+question_count = 0
+while timer < 90:
     # Get a random country.
     countries = list(f_capitals.keys())
     rand_country = random.choice(countries)
+    if rand_country in already_asked:
+        continue
 
     # Consider using a recursive function.
     already_asked.append(rand_country)
@@ -69,10 +127,13 @@ while True:
     correct_answers = list()
     correct_answers.append(correct_answer)
 
-    print(f'What is the capital of {rand_country}')
-    for i in range(4):
-        print('ABCD'[i], answer_options[i])
+    # Displays the question and its possible answers.
+    print(f'What is the capital of {rand_country}?')
+    d_options = dict_options(answer_options)
+    for k, v in d_options.items():
+        print(k, v)
     print('')
-
+    option = input('Option: ')
+    print('')
 
 print("Time's over!")

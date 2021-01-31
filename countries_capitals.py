@@ -1,3 +1,4 @@
+# Contains a list of countries and its capitals.
 capitals = [
     {
         "country": "Afghanistan",
@@ -869,7 +870,7 @@ capitals = [
     },
     {
         "country": "Trinidad and Tobago",
-        "city": "Port-of-Spain"
+        "city": "Port of Spain"
     },
     {
         "country": "Tunisia",
