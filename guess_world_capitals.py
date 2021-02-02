@@ -105,7 +105,7 @@ def check_answer(d_options, selected_opt, correct_ans):
         return False
 
 
-def game_stats(username, score, question_count, streak):
+def game_stats(username, score, question_count, accuracy, streak):
     """Displays user game stats.
 
     :param username: name of user.
@@ -114,15 +114,16 @@ def game_stats(username, score, question_count, streak):
     :type score: int
     :param question_count: number of questions responded.
     :type question_count: int
+    :param accuracy: percentage of right answers.
+    :type accuracy: float
     :param streak: largest guessing streak.
     :type streak: int
     """
-    streak_f = str(round(streak, 2))
     stats = f"Alright {username}, let's review your game stats.\n"
     stats += f"Final score: {score}.\n"
     stats += f"You got {score} out of {question_count} questions.\n"
-    stats += f"Accuracy: {(score / question_count)}%\n"
-    stats += f"Guessing streak: {streak_f}\n"
+    stats += f"Accuracy: {accuracy}%\n"
+    stats += f"Longest streak: {streak}\n"
     print(stats)
 
 
@@ -145,9 +146,9 @@ for d in capitals:
 already_asked = list()
 
 # Create a list to check for the longest streak.
-l_streak = []
+data_streak = []
 current_streak = 0
-longest_streak = []
+longest_streak = 0
 
 score = 0
 question_count = 0
@@ -182,16 +183,19 @@ while True:
         print('Not quite.\n')
     question_count += 1
 
-    # Get longest streak.
-    l_streak.append(int(is_correct))
-    for i in l_streak:
-        if i == 1:
-            current_streak += 1
-        elif i == 0:
-            longest_streak.append(current_streak)
-            current_streak = 0
+    data_streak.append(int(is_correct))
 
-print("Time's up!")
+print("Time's up!\n")
 
-guessing_streak = max(longest_streak)
-game_stats(name, score, question_count, guessing_streak)
+# Get longest streak.
+for i in data_streak:
+    if i == 1:
+        current_streak += 1
+    else:
+        longest_streak = max(longest_streak, current_streak)
+        current_streak = 0
+
+accuracy = round(score / question_count * 100, 0)
+game_stats(name, score, question_count, accuracy, longest_streak)
+
+
