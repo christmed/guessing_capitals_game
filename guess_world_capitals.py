@@ -114,12 +114,15 @@ def game_stats(username, score, question_count, streak):
     :type score: int
     :param question_count: number of questions responded.
     :type question_count: int
+    :param streak: largest guessing streak.
+    :type streak: int
     """
-    stats = f"Alright {username}, let's review your game stats."
-    stats += f"Final score: {score}."
-    stats += f"You got {score} out of {question_count} questions."
-    stats += f"Accuracy: {(score / question_count)}%"
-    stats += f"Guessing streak: {streak}"
+    streak_f = str(round(streak, 2))
+    stats = f"Alright {username}, let's review your game stats.\n"
+    stats += f"Final score: {score}.\n"
+    stats += f"You got {score} out of {question_count} questions.\n"
+    stats += f"Accuracy: {(score / question_count)}%\n"
+    stats += f"Guessing streak: {streak_f}\n"
     print(stats)
 
 
@@ -146,13 +149,15 @@ l_streak = []
 current_streak = 0
 longest_streak = []
 
-# Create a 90 second timer for the game.
-start_time = time.time()
-end_time = time.time()
-timer = end_time - start_time
 score = 0
 question_count = 0
-while timer < 90:
+start_time = time.time()
+while True:
+    # Create a 90 second timer for the game.
+    end_time = time.time()
+    timer = end_time - start_time
+    if timer > 90:
+        break
     # Get a random country.
     countries = list(f_capitals.keys())
     rand_country = random.choice(countries)
@@ -187,5 +192,6 @@ while timer < 90:
             current_streak = 0
 
 print("Time's up!")
+
 guessing_streak = max(longest_streak)
 game_stats(name, score, question_count, guessing_streak)
